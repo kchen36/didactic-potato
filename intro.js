@@ -8,4 +8,4 @@ var addToList = function(e){
     i++;
 };
 var b = document.getElementById('b');
-b.addEventLIstener('click',addToList);
+b.addEventListener('click',addToList);
