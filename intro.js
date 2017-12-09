@@ -20,12 +20,15 @@ var changeHeading = function(e){
 
 //changes heading back to "Hello World!" when mouse isn't hovering over anything
 var revertHeading = function(e){
-	
+	var head = document.getElementById('h');
+	head.innerHTML = "Hello World!";
 };
+
 
 //removes item from list when mouse clicks on it
 var removeItem = function(e) {
-	
+	var list = document.getElementById('thelist');
+	list.removeChild(this);
 };
 
 var liEvents = function(e) {
