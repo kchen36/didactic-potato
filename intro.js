@@ -22,7 +22,7 @@ var addToList = function(e){
 var j = 0;
 var addToList2 = function(e){
 	var li = document.createElement('li');
-    var node = document.createTextNode("item " + fib(j));
+    	var node = document.createTextNode("item " + fib(j));
 	li.appendChild(node);
 	var list = document.getElementById('list2');
 	list.appendChild(li);
@@ -63,7 +63,8 @@ b.addEventListener('click',addToList);
 var b2 = document.getElementById('b2');
 b2.addEventListener('click',addToList2);
 
-var c = document.getElementsByTagName('li');
+var list1 = document.getElementById('thelist');
+var c = list1.getElementsByTagName('li');
 for (each of c) {
 	liEvents(each);
 };
