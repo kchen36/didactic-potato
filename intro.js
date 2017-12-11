@@ -1,6 +1,12 @@
+var fib = function(n){
+    if( n<= 1) return n;
+    return fib(n -1) + fib(n -2);
+}
+
+
 //================== methods ==================
 
-//
+// adds in a new list element to the first list
 var i = 8;
 var addToList = function(e){
 	var li = document.createElement('li');
@@ -9,6 +15,18 @@ var addToList = function(e){
 	var list = document.getElementById('thelist');
 	list.appendChild(li);
 	i++;
+	liEvents(li);
+};
+
+// adds in a new list element to the second list
+var j = 0;
+var addToList2 = function(e){
+	var li = document.createElement('li');
+    var node = document.createTextNode("item " + fib(j));
+	li.appendChild(node);
+	var list = document.getElementById('list2');
+	list.appendChild(li);
+	j++;
 	liEvents(li);
 };
 
@@ -42,7 +60,11 @@ var liEvents = function(e) {
 var b = document.getElementById('b');
 b.addEventListener('click',addToList);
 
+var b2 = document.getElementById('b2');
+b2.addEventListener('click',addToList2);
+
 var c = document.getElementsByTagName('li');
 for (each of c) {
 	liEvents(each);
 };
+
