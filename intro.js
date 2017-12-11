@@ -3,7 +3,6 @@ var fib = function(n){
     return fib(n -1) + fib(n -2);
 }
 
-
 //================== methods ==================
 
 // adds in a new list element to the first list
@@ -27,12 +26,11 @@ var addToList2 = function(e){
 	var list = document.getElementById('list2');
 	list.appendChild(li);
 	j++;
-	liEvents(li);
 };
 
 // changes heading to the item in the list the mouse is hovering over
 var changeHeading = function(e){
-	var head = document.getElementById('h');
+  var head = document.getElementById('h');
 	head.innerHTML = this.innerHTML;
 };
 
