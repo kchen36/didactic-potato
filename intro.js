@@ -18,7 +18,7 @@ var addToList = function(e){
 };
 
 // adds in a new list element to the second list
-var j = 0;
+var j = 1;
 var addToList2 = function(e){
 	var li = document.createElement('li');
     	var node = document.createTextNode("item " + fib(j));
